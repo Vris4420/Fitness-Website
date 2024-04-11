@@ -1,0 +1,11 @@
+const express = require("express");
+const app = express();
+require('dotenv').config();
+
+app.get("/", (req, res) => {
+  res.json({ msg: "Welcome" });
+});
+
+app.listen(process.env.PORT, () => {
+  console.log("server is listening");
+});
